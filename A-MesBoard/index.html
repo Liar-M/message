@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>留言板</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="all">
+			<div class="container">
+				<!-- 弹幕展示区域 -->
+				<div class="danmaku-container">
+					<!-- 弹幕将通过JavaScript动态添加 -->
+				</div>
+				<!-- 留言表单 -->
+				<div class="form-container">
+					<textarea
+						id="messageInput"
+						placeholder="请输入您的留言..."
+						maxlength="500"
+					></textarea>
+					<span class="textarea-hint">最多可输入500个字符</span>
+					<button id="addMessageBtn">添加留言</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

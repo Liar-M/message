@@ -1,0 +1,139 @@
+/* 全局样式 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+.all {
+	max-width: 1000px;
+	height: 100vh;
+	margin: 0 auto;
+	position: relative;
+	/* background-color: #fff; */
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(231, 7, 7, 0.1);
+	background: url(img/留言板.png) no-repeat;
+	background-size: 100% 100%;
+	z-index: 100;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: transparent;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+h1 {
+	text-align: center;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+/* 表单样式 */
+.form-container {
+	margin-bottom: 30px;
+	margin-top: 150px;
+}
+
+#messageInput {
+	width: 70%;
+	min-height: 150px;
+	padding: 16px;
+	font-size: 16px;
+	line-height: 1.7;
+	color: #1a202c;
+	background: transparent;
+	border: 2px solid #e2e8f0;
+	border-radius: 12px;
+	resize: vertical;
+	transition: all 0.3s;
+	font-family: "Inter", -apple-system, system-ui, sans-serif;
+}
+#messageInput:hover {
+	border-color: #cbd5e0;
+}
+
+#messageInput:focus {
+	outline: none;
+	border-color: #4299e1;
+	box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.15);
+}
+
+.textarea-hint {
+	display: block;
+	margin-top: 8px;
+	font-size: 12px;
+	color: #718096;
+	text-align: right;
+}
+#addMessageBtn {
+	display: block;
+	margin-top: 10px;
+	padding: 8px 16px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s;
+}
+
+#addMessageBtn:hover {
+	background-color: #45a049;
+}
+
+/* 弹幕容器 */
+.danmaku-container {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	overflow: hidden;
+	margin-top: 100px;
+}
+
+/* 弹幕样式 */
+.danmaku {
+	position: absolute;
+	white-space: nowrap;
+	padding: 8px 12px;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	border-radius: 15px;
+	font-size: 14px;
+	animation: danmaku-move linear;
+	left: 100%;
+}
+
+/* 弹幕动画 */
+@keyframes danmaku-move {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100vw);
+	}
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+	.container {
+		padding: 10px;
+	}
+
+	.danmaku-container {
+		height: 300px;
+	}
+}
